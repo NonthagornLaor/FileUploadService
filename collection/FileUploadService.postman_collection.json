@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "4cec2c6c-9af7-466a-b272-33df79ccd6d4",
+		"name": "FileUploadService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authen_gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7063/api/ Authentication",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"api",
+						" Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPI_gateway",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJSb2xlIjoiYWRtaW4iLCJuYmYiOjE3MDUxMTE3NzMsImV4cCI6MTcwNTE0MDU3MywiaWF0IjoxNzA1MTExNzczfQ.YdhcQKyJmZTmJIsZXn4URiKTG4La1usHroHZ4aqjpH4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7234/gateway/TestAPI",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"gateway",
+						"TestAPI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FileUpload_gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7234/gateway/FileUpload",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"gateway",
+						"FileUpload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
