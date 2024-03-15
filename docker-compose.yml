@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  fileuploadservice.api:
+    image: ${DOCKER_REGISTRY-}fileuploadserviceapi
+    build:
+      context: .
+      dockerfile: src/FileUploadService.API/Dockerfile
