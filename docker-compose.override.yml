@@ -4,13 +4,12 @@ services:
   fileuploadservice.gateway:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      #- ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_URLS=https:http://+:80
+      - ASPNETCORE_URLS=https://+:443;http://+:80
     #ports:
     #  - "80"
     #  - "443"
     ports:
-      - "7234:80"
+      - "32794:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
@@ -21,13 +20,12 @@ services:
   fileuploadservice.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      #- ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_URLS=https:http://+:80
+      - ASPNETCORE_URLS=https://+:443;http://+:80
     #ports:
     #  - "80"
     #  - "443"
     ports:
-      - "7116:80"
+      - "32796:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
@@ -35,13 +33,12 @@ services:
   authen.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      #- ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_URLS=https:http://+:80
+      - ASPNETCORE_URLS=https://+:443;http://+:80
     #ports:
     #  - "80"
     #  - "443"
     ports:
-      - "7063:80"
+      - "32792:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

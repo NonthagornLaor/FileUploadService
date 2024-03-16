@@ -7,7 +7,8 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7063
+          //"Port": 7063
+          "Port": 32792
         }
       ],
       "UpstreamPathTemplate": "/gateway/Authentication",
@@ -21,7 +22,8 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7116
+          //"Port": 7116
+          "Port": 32796
         }
       ],
       "UpstreamPathTemplate": "/gateway/TestAPI",
@@ -43,7 +45,8 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7116
+          //"Port": 7116
+          "Port": 32796
         }
       ],
       "UpstreamPathTemplate": "/gateway/FileUpload",
@@ -59,6 +62,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https/localhost:7234"
+    //"BaseUrl": "https/localhost:7234"
+    "BaseUrl": "https//localhost:32794"
   }
 }
