@@ -9,33 +9,29 @@ builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
 
 builder.Services.AddOcelot(builder.Configuration);
 builder.Services.AddJWTExtention();
-//var baseAuthenticationProviderKey = "Bearer";
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-//})
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CORSPolicy",
+        builder => builder
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials()
+        .SetIsOriginAllowed((hosts) => true));
+});
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-//    // Adding Jwt Bearer  
-//    .AddJwtBearer(baseAuthenticationProviderKey, options =>
-//    {
-//        options.SaveToken = true;
-//        options.RequireHttpsMetadata = false;
-//        options.TokenValidationParameters = new TokenValidationParameters()
-//        {
-//            ValidateIssuer = true,
-//            ValidateAudience = true,
-//            ValidateIssuerSigningKey = true,
-//            ValidateLifetime = true,
-//            ValidAudience = "ValidAudience",
-//            ValidIssuer = "ValidIssuer ",
-//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("IssuerSigningKey"))
-//        };
-//    });
 var app = builder.Build();
-
-await app.UseOcelot();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+app.UseCors("CORSPolicy");
+app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+app.MapControllers();
+await app.UseOcelot();
 app.Run();

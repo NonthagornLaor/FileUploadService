@@ -1,8 +1,22 @@
 version: '3.4'
 
 services:
+  fileuploadservice.gateway:
+    image: ${DOCKER_REGISTRY-}fileuploadservicegateway
+    build:
+      context: .
+      dockerfile: src/FileUploadService.gateway/Dockerfile
+
   fileuploadservice.api:
     image: ${DOCKER_REGISTRY-}fileuploadserviceapi
     build:
       context: .
       dockerfile: src/FileUploadService.API/Dockerfile
+
+
+  authen.api:
+    image: ${DOCKER_REGISTRY-}authenapi
+    build:
+      context: .
+      dockerfile: src/Authen.API/Dockerfile
+

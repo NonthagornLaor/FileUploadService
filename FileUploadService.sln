@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authen.API", "src\Authen.AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sendmail", "src\Sendmail\Sendmail.csproj", "{F7B3853A-D8EB-4765-B6A7-DF95CF67DE46}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{682A77DF-45BA-4E31-9C42-7423D6324BA2}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F9400C35-F279-4E40-AA81-090AE7643BEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,10 @@ Global
 		{F7B3853A-D8EB-4765-B6A7-DF95CF67DE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B3853A-D8EB-4765-B6A7-DF95CF67DE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B3853A-D8EB-4765-B6A7-DF95CF67DE46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{682A77DF-45BA-4E31-9C42-7423D6324BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{682A77DF-45BA-4E31-9C42-7423D6324BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{682A77DF-45BA-4E31-9C42-7423D6324BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{682A77DF-45BA-4E31-9C42-7423D6324BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9400C35-F279-4E40-AA81-090AE7643BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9400C35-F279-4E40-AA81-090AE7643BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9400C35-F279-4E40-AA81-090AE7643BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9400C35-F279-4E40-AA81-090AE7643BEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
