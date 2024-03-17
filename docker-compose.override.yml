@@ -9,7 +9,7 @@ services:
     #  - "80"
     #  - "443"
     ports:
-      - "32794:80"
+      - "32772:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
@@ -25,7 +25,7 @@ services:
     #  - "80"
     #  - "443"
     ports:
-      - "32796:80"
+      - "32770:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
@@ -38,7 +38,7 @@ services:
     #  - "80"
     #  - "443"
     ports:
-      - "32792:80"
+      - "32768:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

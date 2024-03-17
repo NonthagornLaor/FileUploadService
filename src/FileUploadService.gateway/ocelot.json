@@ -8,35 +8,51 @@
         {
           "Host": "localhost",
           //"Port": 7063
-          "Port": 32792
+          "Port": 32768
         }
       ],
       "UpstreamPathTemplate": "/gateway/Authentication",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 2
+      },
+      "DangerousAcceptAnyServerCertificateValidator": true
     },
 
     // Test API
-    {
-      "DownstreamPathTemplate": "/api/TestAPI",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          //"Port": 7116
-          "Port": 32796
-        }
-      ],
-      "UpstreamPathTemplate": "/gateway/TestAPI",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      }
-      //"RouteClaimsRequirement": {
-      //  "Role" : "admin"
-      //}
-      //"DangerousAcceptAnyServerCertificateValidator": true
-    },
+    //{
+    //  "DownstreamPathTemplate": "/api/TestAPI",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      //"Port": 7116
+    //      "Port": 32770
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/gateway/TestAPI",
+    //  "UpstreamHttpMethod": [ "GET" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "Bearer",
+    //    "AllowedScopes": []
+    //  },
+    //  "RateLimitOptions": {
+    //    "ClientWhitelist": [],
+    //    "EnableRateLimiting": true,
+    //    "Period": "1s",
+    //    "PeriodTimespan": 1,
+    //    "Limit": 2
+    //  },
+    //  "DangerousAcceptAnyServerCertificateValidator": true
+    //  //"RouteClaimsRequirement": {
+    //  //  "Role" : "admin"
+    //  //}
+    //  //"DangerousAcceptAnyServerCertificateValidator": true
+    //},
 
     // Upload File API
     {
@@ -46,7 +62,7 @@
         {
           "Host": "localhost",
           //"Port": 7116
-          "Port": 32796
+          "Port": 32770
         }
       ],
       "UpstreamPathTemplate": "/gateway/FileUpload",
@@ -54,7 +70,15 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
-      }
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 2
+      },
+      "DangerousAcceptAnyServerCertificateValidator": true
       //"RouteClaimsRequirement": {
       //  "Role" : "admin"
       //}
@@ -63,6 +87,6 @@
   ],
   "GlobalConfiguration": {
     //"BaseUrl": "https/localhost:7234"
-    "BaseUrl": "https//localhost:32794"
+    "BaseUrl": "https//localhost:32772"
   }
 }
