@@ -6,17 +6,25 @@ services:
     build:
       context: .
       dockerfile: src/FileUploadService.gateway/Dockerfile
+    ports:
+      - 32798:80
+      - 32798:443
 
   fileuploadservice.api:
     image: ${DOCKER_REGISTRY-}fileuploadserviceapi
     build:
       context: .
       dockerfile: src/FileUploadService.API/Dockerfile
-
+    ports:
+      - 32802:80
+      - 32802:443
 
   authen.api:
     image: ${DOCKER_REGISTRY-}authenapi
     build:
       context: .
       dockerfile: src/Authen.API/Dockerfile
-
+    ports:
+      - 32800:80
+      - 32800:443
+    
